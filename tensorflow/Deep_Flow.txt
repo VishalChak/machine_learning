@@ -1,0 +1,14 @@
+''' Data Sets : mnnet data set tarin 60k and test 10k'''
+
+''''
+What :
+input > weight > hidden layer(1)(activation fuction) > weights >
+hidden layer (2) activate  function > weights > output layer
+
+compare the output to the intended output > cost fuction (cross entropy )
+Optimization function (optimizer) > minimize cost (AdamOptimizer ... SGD AdaGrad)
+Backpropagation
+
+feed forword +backprop =   epoch
+
+'''

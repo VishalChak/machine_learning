@@ -1,0 +1,21 @@
+scikit-learn 4 Step modeling Pattern:
+
+1. Import the Class you plan to Use.
+2. "Instantiate" the estimator
+	"Estimator" is scikit-learn's term for model
+	"Instantiate" means " make an instace of"
+	
+	Name of the objet does not matter
+	can specify tuning parameters (aka "hyperparameters" during this Step)
+	All parametes not specified are set to their defaults
+
+3. fit the model with the data(aka "model trainning")
+	Model is lrearning the realationship between X and y
+	Occures in place
+
+4. Predict the responce for a new observation
+	New observation are called "out-of-sample" data
+	Uses the information it learned during the model training process
+	
+	Return a NumPy array
+	Van pridict for a multiple observations at once

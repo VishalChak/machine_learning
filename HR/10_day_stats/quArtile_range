@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May 16 11:12:31 2018
+
+@author: vishal
+"""
+
+n = 6
+a = [6,12,8,10,20,16]
+b = [5,4,3,2,1,6]
+x =[]
+for i in range(n):
+    l = [a[i]] * b[i]
+    x.extend(l)
+    
+    
+def quartile(x):
+    n = len(x)
+    print(n)
+    if (n%2 ==0):
+        return (x[n//2]+ x[(n//2 -1)])/2
+    else:
+        return x[n//2]
+
+x.sort()
+
+q1 = 0
+q3 = 0
+
+if len(x) % 2 ==0:
+    q1 = quartile(x[:len(x)//2])
+    q3 = quartile(x[(len(x)//2+1):])
+else:
+    q1 = quartile(x[:len(x)//2+1])
+    q3 = quartile(x[len(x)//2+1:])
+print(len(x))
+print(q3-q1)

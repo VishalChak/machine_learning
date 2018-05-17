@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May 16 10:16:56 2018
+
+@author: vishal
+"""
+
+x = [6, 6, 6, 6, 6, 8, 8, 8, 10, 10, 12, 12, 12, 12, 16, 16, 16, 16, 16, 20]
+
+def quartile(x):
+    n = len(x)
+    print(x)
+    if (n%2 ==0):
+        return (x[n//2]+ x[(n//2 -1)])/2
+    else:
+        return x[n//2]
+
+x.sort()
+
+q1 = 0
+q3 = 0
+
+if len(x) % 2 ==0:
+    q1 = quartile(x[:len(x)//2])
+    q3 = quartile(x[(len(x)//2):])
+else:
+    q1 = quartile(x[:len(x)//2])
+    q3 = quartile(x[(len(x)//2+1):])
+
+print(q3-q1)

@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 17 18:40:27 2018
+
+@author: vishal
+"""
+
+s = 'SOSSPSSQSSOR'
+
+def get_diff(a, b):
+    temp = 0
+    for i in range(3):
+        if a[i] != b[i] :
+            temp +=1
+    return temp
+
+count = 0
+for i in range(len(s)//3):
+    temp = s[i*3:(i+1)*3]
+    count +=get_diff(temp, 'SOS')
+    
+print(count)
+
+s = 'hackerworld'
+
+hr = 'hackerrank'
+
+j=0
+for i in range(len(s)):
+    if s[i]==hr[j]:
+        j +=1
+if j == len(hr):
+    print('yes')
+else:
+    print('no')
+    
+    
+arr =  ['vishal22222222222222222222222222222222', 'babu']
+
+arr.sort()        
+    

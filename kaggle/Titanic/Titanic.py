@@ -40,11 +40,11 @@ class Titanic:
 		y_pred[y_pred >=.5] = 1
 		y_pred[y_pred <.5] = 0
 		y_pred = y_pred.astype(int)
-		np.savetxt("/home/vishal/ML/Kaggle_Competition/Titanic/res.csv", y_pred, delimiter=",")
-		print(y_pred)
+		np.savetxt("/home/vishal/datasets/kaggle/titanic/res.csv", y_pred, delimiter=",")
+
 if __name__ == "__main__":
 	obj = Titanic()
-	train_fp = "/home/vishal/ML/Kaggle_Competition/Titanic/train.csv"
-	test_fp = "/home/vishal/ML/Kaggle_Competition/Titanic/test.csv"
+	train_fp = "/home/vishal/datasets/kaggle/titanic/train.csv"
+	test_fp = "/home/vishal/datasets/kaggle/titanic/test.csv"
 	linleg = obj.create_model(train_fp)
 	obj.prediction(linleg,test_fp)

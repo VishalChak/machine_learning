@@ -35,7 +35,7 @@ x = np.random.normal(size=100)
 
 sns.distplot(dataset['Score'])
 
-dataset.isnull().count()
+dataset.isnull().sum()
 
 sns.boxplot(data=dataset);
 sns.violinplot(data=dataset)
